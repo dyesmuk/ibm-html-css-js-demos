@@ -28,16 +28,25 @@ console.log("a function passed as arg to another function is called as callback 
 // fun({city: 'Hyderabad', pin: 500001});
 
 // // function as arg  
+// const fun = (arg) => {
+//     console.log("fun function called.");
+//     arg(); // function call 
+// };
+
+// const callbackFun = () => {
+//     console.log("named callback function called.");
+// };
+
+// fun(callbackFun);
+
+// // fun(() => {});
+// fun(() => { console.log("anonymous callback function called"); });
+
 const fun = (arg) => {
     console.log("fun function called.");
-    arg(); // function call 
+    arg(abc); // function call 
 };
-
-const callbackFun = () => {
-    console.log("named callback function called.");
-};
-
-fun(callbackFun);
-
 // fun(() => {});
-fun(() => { console.log("anonymous callback function called"); });
+fun();
+
+
