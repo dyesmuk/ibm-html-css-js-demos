@@ -22,10 +22,9 @@
 // console.log(num3);
 // console.log(num4);
 
-// number, string, boolean, undefined, NaN ...  
-
 // console.log("JavaScript - dynamically typed language");
 // console.log("---------------------------------------");
+// console.log("datatypes in JS - number, string, boolean, undefined, NaN ...");  
 
 // let myVariable;
 // console.log(myVariable);
@@ -65,9 +64,19 @@ let y;
 console.log(x + y); // NaN 
 console.log(x - y); // NaN 
 
+console.log("Truthy and falsy values in JS");
+console.log('Falsy values - undefined, NaN, null, 0, "", false');
 
+let input = 1;
 
+// if input is given, print 'yes' else print 'no'
 
+if (input) {
+    console.log("Yes");
+}
+else {
+    console.log("No");
+}
 
 
 
