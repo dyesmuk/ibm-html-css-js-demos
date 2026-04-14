@@ -1,12 +1,236 @@
-<!DOCTYPE html>
-<html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+
 <head>
 </head>
+
 <body>
-    <h1>User Registration Form</h1>
-    <hr />
-    <p>Use the form below to register as a new user.</p>
-    <form action=""></form>
-    
+    <div>
+        <h1>User Registration Form</h1>
+        <hr />
+        <p>Use the form below to register as a new user.</p>
+        <form onsubmit="submitRegister(); return false;">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Create a username" required autofocus />
+                <br />
+                <label for="firstname">First name:</label>
+                <input type="text" id="firstname" placeholder="Enter your first name" required />
+                <br />
+                <label for="lastname">Last name:</label>
+                <input type="text" id="lastname" placeholder="Enter your last name" required />
+                <br />
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
+                <br />
+                <label for="confirmpassword">Confirm password:</label>
+                <input type="password" id="confirmpassword" placeholder="Confirm your password" required />
+                <br />
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required />
+                <br />
+                <label for="aadhaar">Aadhaar:</label>
+                <input type="number" id="aadhaar" placeholder="Enter your aadhaar" required />
+                <br />
+                <label for="dateofbirth">Date of birth:</label>
+                <input type="date" id="dateofbirth" placeholder="Enter or select your date of birth" required />
+                <br />
+                <label for="bio">Bio:</label>
+                <textarea id="bio" placeholder="Please describe yourself"></textarea>
+                <br />
+                <label for="social">Social</label>
+                <input type="url" id="website" placeholder="Please enter your social" required />
+                <br />
+                <label for="city">City:</label>
+                <input type="text" id="city" list="cities-list" placeholder="Enter your city" required />
+                <datalist id="cities-list">
+                    <option value="Bengaluru">
+                    <option value="Chennai">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Pune">
+                </datalist>
+                <br />
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option value="IN">India</option>
+                    <option value="US">US</option>
+                </select>
+                <br />
+
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                <br />
+
+                <label for="skills">Skill set:</label>
+                <input type="checkbox" id="skills"> Java
+                <input type="checkbox" id="skills"> JavaScript
+                <input type="checkbox" id="skills"> Spring
+                <input type="checkbox" id="skills"> Angular
+                <input type="checkbox" id="skills"> React
+                <br />
+                <label for="expericnce">Experience:</label>
+                <input type="range" id="experience">
+                <br />
+                <label for="profilepic">Photo</label>
+                <input type="file" id="profilepic" />
+                <hr />
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const submitRegister = () => {
+            alert("Success!");
+            document.getElementById("result").innerText = "Form submitted successfully!"
+        }
+    </script>
 </body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+    <div>
+        <h1>User Registration Form</h1>
+        <hr />
+        <p>Use the form below to register as a new user.</p>
+        <form onsubmit="submitRegister(); return false;">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Create a username" required minlength="3" maxlength="20"
+                    pattern="[A-Za-z0-9_]{3,20}" title="3-20 characters, letters, numbers or underscore only"
+                    autofocus />
+                <br />
+
+                <label for="firstname">First name:</label>
+                <input type="text" id="firstname" placeholder="Enter your first name" required pattern="[A-Za-z]{2,}"
+                    title="Only letters, minimum 2 characters" />
+                <br />
+
+                <label for="lastname">Last name:</label>
+                <input type="text" id="lastname" placeholder="Enter your last name" required pattern="[A-Za-z]{2,}"
+                    title="Only letters, minimum 2 characters" />
+                <br />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required minlength="8"
+                    pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}"
+                    title="Minimum 8 characters, at least 1 uppercase, 1 lowercase, 1 number" />
+                <br />
+
+                <label for="confirmpassword">Confirm password:</label>
+                <input type="password" id="confirmpassword" placeholder="Confirm your password" required
+                    minlength="8" />
+                <br />
+
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}"
+                    title="Enter a valid 10-digit phone number" />
+                <br />
+
+                <label for="aadhaar">Aadhaar:</label>
+                <input type="number" id="aadhaar" placeholder="Enter your aadhaar" required min="100000000000"
+                    max="999999999999" title="Enter a valid 12-digit Aadhaar number" />
+                <br />
+
+                <label for="dateofbirth">Date of birth:</label>
+                <input type="date" id="dateofbirth" placeholder="Enter or select your date of birth" required
+                    max="2008-01-01" />
+                <br />
+
+                <label for="bio">Bio:</label>
+                <textarea id="bio" placeholder="Please describe yourself" minlength="10" maxlength="300"
+                    title="Minimum 10 and maximum 300 characters"></textarea>
+                <br />
+
+                <label for="social">Social</label>
+                <input type="url" id="website" placeholder="Please enter your social" required
+                    title="Enter a valid URL starting with http:// or https://" />
+                <br />
+
+                <label for="city">City:</label>
+                <input type="text" id="city" list="cities-list" placeholder="Enter your city" required />
+                <datalist id="cities-list">
+                    <option value="Bengaluru">
+                    <option value="Chennai">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Pune">
+                </datalist>
+                <br />
+
+                <label for="country">Country:</label>
+                <select id="country" required>
+                    <option value="">Select</option>
+                    <option value="IN">India</option>
+                    <option value="US">US</option>
+                </select>
+                <br />
+
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female
+                <br />
+
+                <label for="skills">Skill set:</label>
+                <input type="checkbox" name="skills" value="java" required> Java
+                <input type="checkbox" name="skills" value="javascript"> JavaScript
+                <input type="checkbox" name="skills" value="spring"> Spring
+                <input type="checkbox" name="skills" value="angular"> Angular
+                <input type="checkbox" name="skills" value="react"> React
+                <br />
+
+                <label for="expericnce">Experience:</label>
+                <input type="range" id="experience" min="0" max="30" step="1" required />
+                <br />
+
+                <label for="profilepic">Photo</label>
+                <input type="file" id="profilepic" accept="image/png, image/jpeg" required />
+                <hr />
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const submitRegister = () => {
+            alert("Success!");
+            document.getElementById("result").innerText = "Form submitted successfully!"
+        }
+    </script>
+</body>
+
 </html>
