@@ -38,9 +38,9 @@ console.log("-----------------------");
 // console.log(output1); // undefined
 // console.log(output2);
 
-console.log("functions short syntax")
+// console.log("functions short syntax")
 
-const addNums = (a, b) => { return a + b; };
-const addNums2 = (a, b) => a + b;
-const calcGst = amount => amount * 0.18;
-const printGst = amount => console.log(amount * 0.18);
+// const addNums = (a, b) => { return a + b; };
+// const addNums2 = (a, b) => a + b;
+// const calcGst = amount => amount * 0.18;
+// const printGst = amount => console.log(amount * 0.18);
