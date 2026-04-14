@@ -99,23 +99,41 @@
 // const fullName = `${firstName} ${lastName} ${city}`;
 // console.log(fullName);
 
-// console.log("Arrays and Objects in JS");
-// console.log("------------------------");
+// // console.log("Arrays and Objects in JS");
+// // console.log("------------------------");
 
-const myFrinds = ["Sonu", "Monu", "Tonu", "Ponu"];
-console.log(myFrinds);
+const myFrinds = ["Sonu", "Monu", "Tonu", "Ponu", 10, false, 20.75];
+// console.log(myFrinds);
 
-console.log("Iterate array using for loop: ");
-for (let i = 0; i < myFrinds.length; i++)
-    console.log(myFrinds[i]);
+// console.log("Iterate array using for loop: ");
+// for (let i = 0; i < myFrinds.length; i++)
+//     console.log(myFrinds[i]);
 
-console.log("Iterate array using for in loop: ");
-for (let i in myFrinds) 
-    console.log(myFrinds[i]);
+// console.log("Iterate array using for in loop: ");
+// for (let i in myFrinds) 
+//     console.log(myFrinds[i]);
 
-console.log("Iterate array using for of loop: ");
-for (let friend of myFrinds) 
-    console.log(friend);
+// console.log("Iterate array using for of loop: ");
+// for (let friend of myFrinds) 
+//     console.log(friend);
 
-console.log("Iterate array using forEach function: ");
-myFrinds.forEach(f => console.log(f));
+// console.log("Iterate array using forEach function: ");
+// myFrinds.forEach(f => console.log(f));
+
+// console.log("Array methods in JavaScript");
+// console.log("---------------------------");
+// to learn later 
+
+// console.log("Objects in JavaScript");
+
+// const employee = {
+//     id: 101,
+//     name: 'Sonu',
+//     salary: 10.50,
+//     isIndian: true,
+//     phones: [9876543210, 6789054321],
+//     address: { city: 'Hyderabad', pin: 500001 },
+//     printData: null
+// };
+// console.log(employee.name);
+
