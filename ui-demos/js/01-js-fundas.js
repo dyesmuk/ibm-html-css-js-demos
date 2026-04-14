@@ -66,6 +66,8 @@ console.log(x - y); // NaN
 
 console.log("Truthy and falsy values in JS");
 console.log('Falsy values - undefined, NaN, null, 0, "", false');
+console.log('Truthy values - everything else');
+
 
 let input = 1;
 
