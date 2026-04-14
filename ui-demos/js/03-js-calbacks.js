@@ -1,7 +1,7 @@
 
 console.log("Callback functions in JavaScript");
 console.log("--------------------------------");
-
+console.log("a function passed as arg to another function is called as callback function");
 // What type of argument to the function to provide? 
 // How do you decide that?
 
