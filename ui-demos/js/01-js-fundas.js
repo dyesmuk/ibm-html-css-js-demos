@@ -79,16 +79,16 @@
 //     console.log("No");
 // }
 
-console.log("special comparison operators === and !==");
+// console.log("special comparison operators === and !==");
 
-let x = 10;
-let y = "10";
+// let x = 10;
+// let y = "10";
 
-console.log(x == y);
-console.log(x === y);
-console.log(x != y);
-console.log(x !== y);
+// console.log(x == y); // true 
+// console.log(x === y); // false 
+// console.log(x != y); // false 
+// console.log(x !== y); // true 
 
-
+console.log("")
 
 
