@@ -1,114 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-</head>
-
-<body>
-    <div>
-        <h1>User Registration Form</h1>
-        <hr />
-        <p>Use the form below to register as a new user.</p>
-        <form onsubmit="submitRegister(); return false;">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" placeholder="Create a username" required autofocus />
-                <br />
-                <label for="firstname">First name:</label>
-                <input type="text" id="firstname" placeholder="Enter your first name" required />
-                <br />
-                <label for="lastname">Last name:</label>
-                <input type="text" id="lastname" placeholder="Enter your last name" required />
-                <br />
-                <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="Enter your password" required />
-                <br />
-                <label for="confirmpassword">Confirm password:</label>
-                <input type="password" id="confirmpassword" placeholder="Confirm your password" required />
-                <br />
-                <label for="phone">Phone number:</label>
-                <input type="tel" id="phone" placeholder="Enter your phone number" required />
-                <br />
-                <label for="aadhaar">Aadhaar:</label>
-                <input type="number" id="aadhaar" placeholder="Enter your aadhaar" required />
-                <br />
-                <label for="dateofbirth">Date of birth:</label>
-                <input type="date" id="dateofbirth" placeholder="Enter or select your date of birth" required />
-                <br />
-                <label for="bio">Bio:</label>
-                <textarea id="bio" placeholder="Please describe yourself"></textarea>
-                <br />
-                <label for="social">Social</label>
-                <input type="url" id="website" placeholder="Please enter your social" required />
-                <br />
-                <label for="city">City:</label>
-                <input type="text" id="city" list="cities-list" placeholder="Enter your city" required />
-                <datalist id="cities-list">
-                    <option value="Bengaluru">
-                    <option value="Chennai">
-                    <option value="Hyderabad">
-                    <option value="Mumbai">
-                    <option value="Pune">
-                </datalist>
-                <br />
-                <label for="country">Country:</label>
-                <select id="country">
-                    <option value="IN">India</option>
-                    <option value="US">US</option>
-                </select>
-                <br />
-
-                <label for="gender">Gender:</label>
-                <input type="radio" name="gender"> Male
-                <input type="radio" name="gender"> Female
-                <br />
-
-                <label for="skills">Skill set:</label>
-                <input type="checkbox" id="skills"> Java
-                <input type="checkbox" id="skills"> JavaScript
-                <input type="checkbox" id="skills"> Spring
-                <input type="checkbox" id="skills"> Angular
-                <input type="checkbox" id="skills"> React
-                <br />
-                <label for="expericnce">Experience:</label>
-                <input type="range" id="experience">
-                <br />
-                <label for="profilepic">Photo</label>
-                <input type="file" id="profilepic" />
-                <hr />
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-
-        </form>
-    </div>
-    <div>
-        <p id="result"></p>
-    </div>
-
-    <script>
-        const submitRegister = () => {
-            alert("Success!");
-            document.getElementById("result").innerText = "Form submitted successfully!"
-        }
-    </script>
-</body>
-
-</html> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,7 +12,7 @@
         <hr />
         <p>Use the form below to register as a new user.</p>
         <form onsubmit="submitRegister(); return false;">
-            <div>
+            <div class="form-border">
                 <label for="username">Username:</label>
                 <input type="text" id="username" placeholder="Create a username" required minlength="3" maxlength="20"
                     pattern="[A-Za-z0-9_]{3,20}" title="3-20 characters, letters, numbers or underscore only"
@@ -234,3 +123,111 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <div>
+        <h1>User Registration Form</h1>
+        <hr />
+        <p>Use the form below to register as a new user.</p>
+        <form onsubmit="submitRegister(); return false;">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Create a username" required autofocus />
+                <br />
+                <label for="firstname">First name:</label>
+                <input type="text" id="firstname" placeholder="Enter your first name" required />
+                <br />
+                <label for="lastname">Last name:</label>
+                <input type="text" id="lastname" placeholder="Enter your last name" required />
+                <br />
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
+                <br />
+                <label for="confirmpassword">Confirm password:</label>
+                <input type="password" id="confirmpassword" placeholder="Confirm your password" required />
+                <br />
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required />
+                <br />
+                <label for="aadhaar">Aadhaar:</label>
+                <input type="number" id="aadhaar" placeholder="Enter your aadhaar" required />
+                <br />
+                <label for="dateofbirth">Date of birth:</label>
+                <input type="date" id="dateofbirth" placeholder="Enter or select your date of birth" required />
+                <br />
+                <label for="bio">Bio:</label>
+                <textarea id="bio" placeholder="Please describe yourself"></textarea>
+                <br />
+                <label for="social">Social</label>
+                <input type="url" id="website" placeholder="Please enter your social" required />
+                <br />
+                <label for="city">City:</label>
+                <input type="text" id="city" list="cities-list" placeholder="Enter your city" required />
+                <datalist id="cities-list">
+                    <option value="Bengaluru">
+                    <option value="Chennai">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Pune">
+                </datalist>
+                <br />
+                <label for="country">Country:</label>
+                <select id="country">
+                    <option value="IN">India</option>
+                    <option value="US">US</option>
+                </select>
+                <br />
+
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                <br />
+
+                <label for="skills">Skill set:</label>
+                <input type="checkbox" id="skills"> Java
+                <input type="checkbox" id="skills"> JavaScript
+                <input type="checkbox" id="skills"> Spring
+                <input type="checkbox" id="skills"> Angular
+                <input type="checkbox" id="skills"> React
+                <br />
+                <label for="expericnce">Experience:</label>
+                <input type="range" id="experience">
+                <br />
+                <label for="profilepic">Photo</label>
+                <input type="file" id="profilepic" />
+                <hr />
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const submitRegister = () => {
+            alert("Success!");
+            document.getElementById("result").innerText = "Form submitted successfully!"
+        }
+    </script>
+</body>
+
+</html> -->
