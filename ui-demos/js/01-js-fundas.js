@@ -89,6 +89,33 @@
 // console.log(x != y); // false 
 // console.log(x !== y); // true 
 
-console.log("")
+// console.log("String literals in JS");
+// console.log("---------------------");
 
+// const firstName = "Sonu"; // double quotes 
+// const lastName = 'Reddy'; // single quotes 
+// const city = `Hyderabad`; // backticks 
+// // const fullName = firstName + " " + lastName + " " + city; // valid string concatenation 
+// const fullName = `${firstName} ${lastName} ${city}`;
+// console.log(fullName);
 
+// console.log("Arrays and Objects in JS");
+// console.log("------------------------");
+
+const myFrinds = ["Sonu", "Monu", "Tonu", "Ponu"];
+console.log(myFrinds);
+
+console.log("Iterate array using for loop: ");
+for (let i = 0; i < myFrinds.length; i++)
+    console.log(myFrinds[i]);
+
+console.log("Iterate array using for in loop: ");
+for (let i in myFrinds) 
+    console.log(myFrinds[i]);
+
+console.log("Iterate array using for of loop: ");
+for (let friend of myFrinds) 
+    console.log(friend);
+
+console.log("Iterate array using forEach function: ");
+myFrinds.forEach(f => console.log(f));
