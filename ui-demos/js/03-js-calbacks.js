@@ -44,9 +44,18 @@ console.log("a function passed as arg to another function is called as callback 
 
 const fun = (arg) => {
     console.log("fun function called.");
-    arg(abc); // function call 
+    arg("Hello world!"); // function call 
 };
 
-fun();
+fun((xyz) => {
+    console.log("callback function called.");
+    console.log(xyz);
+});
 
+// object methods 
+// array methods 
+// datatypes in js 
+// html - complete 
+// css - complete 
+// js - upto file 7 
 
