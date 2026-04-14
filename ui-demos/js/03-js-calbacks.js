@@ -46,7 +46,7 @@ const fun = (arg) => {
     console.log("fun function called.");
     arg(abc); // function call 
 };
-// fun(() => {});
+
 fun();
 
 
