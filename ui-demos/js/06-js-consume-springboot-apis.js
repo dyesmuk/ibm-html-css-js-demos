@@ -16,7 +16,13 @@ fetch(`${apiUrl}/login`)
 
 // step2 = use the jwt token to get employee data 
 
-fetch({ url: `${apiUrl}/employees/${employeeId}`, bearerToken: jwtToken })
+fetch(`${apiUrl}/employees/${employeeId}`, {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${jwtToken}`,
+        'Content-Type': 'application/json'
+    }
+})
     .then(resp => resp.json())
     .then(resp => console.log(resp))
     .catch(err => console.log(err));
