@@ -45,13 +45,13 @@ const getEmployees = async () => {
     }
 };
 
-// get employee by id 
-
+// complete the code 
 const getEmployeeById = (id) => {};
 
 const run = async () => {
     await login();
     await getEmployees();
+    // call the method with any id e.g. oid_03001
     await getEmployeeById('oid_03001');
 };
 
