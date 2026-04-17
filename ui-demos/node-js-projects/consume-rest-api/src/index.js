@@ -21,14 +21,14 @@ const api = axios.create({
 });
 
 const login = async () => {
+    console.log("-- login --");
     try {
         const params = new URLSearchParams();
         params.append('username', 'sonu');
         params.append('password', 'sonu');
 
         const response = await axios.post(`${BASE_URL}/login`, params);
-        console.log(response.data);
-        const token = response.data.token || response.data.jwtToken || response.data;
+        const token = response.data;
         console.log(token);
         api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     } catch (error) {
@@ -37,18 +37,28 @@ const login = async () => {
 };
 
 const getEmployees = async () => {
+    console.log("-- getEmployees --");
     try {
         const response = await api.get('/api/v1/employees');
-        console.log('All Employees:', response.data[0]);
+        console.log(response.data[0]);
     } catch (error) {
         console.error(error);
     }
 };
 
-// complete the code 
-const getEmployeeById = (id) => {};
+const getEmployeeById = async (id) => {
+    console.log("-- getEmployeeById --");
+    try {
+        console.log(id);
+        const response = await api.get(`/api/v1/employees/${id}`);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 const run = async () => {
+    console.log("-- run --");
     await login();
     await getEmployees();
     // call the method with any id e.g. oid_03001
