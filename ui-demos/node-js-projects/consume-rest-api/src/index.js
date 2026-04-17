@@ -47,9 +47,12 @@ const getEmployees = async () => {
 
 // get employee by id 
 
+const getEmployeeById = (id) => {};
+
 const run = async () => {
     await login();
     await getEmployees();
+    await getEmployeeById('oid_03001');
 };
 
 run();
