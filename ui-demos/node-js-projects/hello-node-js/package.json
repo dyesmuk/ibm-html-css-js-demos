@@ -1,12 +1,16 @@
 {
   "name": "hello-node-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nodejs demo project for IBM Bengaluru trainees 26 March 2026",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Vaman Rao Deshmukh",
+  "license": "ISC",
+  "dependencies": {
+    
+  }
 }
