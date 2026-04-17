@@ -5,7 +5,6 @@
 
 console.log("-- welcome to calc app --");
 
-
 // // 1. Named Export 
 // import { addNums, subNums, divNums, multiNums } from "./math.js";
 
@@ -20,3 +19,4 @@ math.addNums(10, 20);
 math.subNums(10, 5);
 math.divNums(10, 5);
 math.multiNums(10, 20);
+
