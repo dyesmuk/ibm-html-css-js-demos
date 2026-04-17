@@ -24,6 +24,7 @@ const login = async () => {
     console.log("-- login --");
     try {
         const params = new URLSearchParams();
+
         params.append('username', 'sonu');
         params.append('password', 'sonu');
 
@@ -35,6 +36,19 @@ const login = async () => {
         console.error(error);
     }
 };
+
+// async / await 
+// const getEmployees = async () => {
+//     console.log("-- getEmployees --");
+//     try {
+//         const response = await api.get('/api/v1/employees');
+//         console.log(response.data[0]);
+//     } catch (error) {
+//         console.error(error);
+//     }
+// };
+
+// axios.then().catch();
 
 const getEmployees = async () => {
     console.log("-- getEmployees --");

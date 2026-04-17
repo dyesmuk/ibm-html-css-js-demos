@@ -8,7 +8,9 @@ const apiUrl = "https://jsonplaceholder.typicode.com/users";
 console.log("display user data with id 2:");
 const userId = 2;
 console.log("option 1 - use fetch().then().then().catch()");
+
 // fetch(apiUrl).then().then().catch();
+
 // fetch(apiUrl).then(resp => resp.json()).then(resp => console.log(resp)).catch(err => console.log(err));
 // console.log("display all users: ");
 // fetch(apiUrl).then(resp => resp.json()).then(resp => console.log(resp)).catch(err => console.log(err));
