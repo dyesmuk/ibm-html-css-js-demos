@@ -1,0 +1,14 @@
+{
+  "name": "consume-rest-api",
+  "version": "1.0.0",
+  "description": "Nodejs demo project to consume REST APIs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vaman Rao Deshmukh",
+  "license": "ISC",
+  "type": "module"
+}
