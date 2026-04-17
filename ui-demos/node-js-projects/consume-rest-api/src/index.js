@@ -1,4 +1,14 @@
 // index.js 
+// 
+
+// import axios from 'axios';
+// console.log("using axios");
+
+// axios.get('https://jsonplaceholder.typicode.com/users/2')
+//     .then(r => console.log(r.data))
+//     .catch(e => console.log(e));
+
+
 
 console.log("Consume REST APIs");
 
@@ -35,6 +45,7 @@ const getEmployees = async () => {
     }
 };
 
+// get employee by id 
 
 const run = async () => {
     await login();
