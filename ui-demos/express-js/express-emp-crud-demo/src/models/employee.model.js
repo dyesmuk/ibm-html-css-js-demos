@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
 
 const employeeSchema = new mongoose.Schema({
+  _id: { type: String },
   firstName: { type: String, required: true },
   lastName: String,
   email: { type: String, required: true, unique: true },
   phone: String,
-  age: Number,
   departmentId: String,
+  age: Number,
   roleId: String,
   projectIds: [String],
   salary: Number,
