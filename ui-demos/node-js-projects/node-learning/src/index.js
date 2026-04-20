@@ -163,7 +163,6 @@ import { hideBin } from 'yargs/helpers';
 // --- Minimal in-memory store ---
 const notes = [];
 
-// --- Functions (missing earlier) ---
 function addNote(title, body) {
   notes.push({ title, body });
   console.log('Note added!');
@@ -173,7 +172,6 @@ function listNotes() {
   return notes;
 }
 
-
 // --- CLI setup ---
 yargs(hideBin(process.argv))
   .command({
@@ -181,7 +179,7 @@ yargs(hideBin(process.argv))
     describe: 'Add a new note',
     builder: {
       title: { describe: 'Note title', type: 'string', demandOption: true },
-      body:  { describe: 'Note body',  type: 'string', demandOption: true }
+      body: { describe: 'Note body', type: 'string', demandOption: true }
     },
     handler(argv) {
       console.log(`Adding: "${argv.title}"`);
