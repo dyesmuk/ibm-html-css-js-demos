@@ -1,0 +1,14 @@
+{
+  "name": "employee-crud-app",
+  "version": "1.0.0",
+  "description": "Minimal Express + MongoDB CRUD API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "mongoose": "9.4.1"
+  }
+}
