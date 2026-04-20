@@ -43,6 +43,20 @@ app.get("/employees", async (req, res) => {
     };
 });
 
+// http://localhost:3000/employees
+app.post("/employees", async (req, res) => {
+    console.log("add new employee");
+    console.log(req.body);
+    try {
+        const employee = new Employee(req.body);
+        await employee.save();
+        res.send("Employee added successfully!")
+    }
+    catch (err) {
+        console.log(err);
+    };
+});
+
 // http://localhost:3000/hello
 app.get("/hello", (req, res) => {
     console.log("hello");
