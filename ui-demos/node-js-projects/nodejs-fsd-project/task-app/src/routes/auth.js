@@ -40,6 +40,7 @@ const loginSchema = Joi.object({
 
 // ── POST /api/auth/register ────────────────────────────────
 router.post('/register', validate(registerSchema), async (req, res, next) => {
+  console.log(`register ${req.body}`); // PII data should not be logged 
   try {
     const user = await User.create(req.body);
     const token = await user.generateAuthToken();
@@ -59,6 +60,7 @@ router.post('/register', validate(registerSchema), async (req, res, next) => {
 
 // ── POST /api/auth/login ───────────────────────────────────
 router.post('/login', validate(loginSchema), async (req, res, next) => {
+  console.log(`login ${req.body}`); // PII data should not be logged 
   try {
     const user = await User.findByCredentials(req.body.email, req.body.password);
     const token = await user.generateAuthToken();
@@ -93,3 +95,4 @@ router.post('/logout-all', requireAuth, async (req, res, next) => {
 });
 
 export default router;
+

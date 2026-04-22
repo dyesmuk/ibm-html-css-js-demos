@@ -1,6 +1,6 @@
 // services/email.js
 
-// ============================================================
+// ================================================================
 // MODULE 14 — Sending Emails
 // services/email.js
 //
@@ -16,8 +16,7 @@
 // From address - Must be your Gmail address, not an arbitrary one 
 // Daily limit - Gmail allows ~500 emails/day — fine for training 
 // 2FA required - App Passwords only work if 2-Step Verification is on
-// ============================================================
-
+// ================================================================
 
 import nodemailer from 'nodemailer';
 
@@ -30,22 +29,13 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function sendWelcomeEmail(to, name) {
+  console.log("welcome");
   if (!process.env.GMAIL_USER) return;
   await transporter.sendMail({
-    from: `"Task App" <${process.env.GMAIL_USER}>`,
+    from: process.env.GMAIL_USER,
     to,
-    subject: `Welcome to Task App, ${name}!`,
-    text: `Hi ${name}, thanks for joining Task App!`,
-    html: `
-      <div style="font-family: sans-serif; max-width: 600px; margin: auto;">
-        <h1 style="color: #4f46e5;">Welcome, ${name}!</h1>
-        <p>Thanks for joining Task App. Get started by creating your first task.</p>
-        <a href="${process.env.APP_URL}/dashboard"
-           style="display:inline-block;padding:12px 24px;background:#4f46e5;color:#fff;border-radius:6px;text-decoration:none;">
-          Go to Dashboard
-        </a>
-      </div>
-    `,
+    subject: "Welcome",
+    text: "Welcome to the app"
   });
 }
 
